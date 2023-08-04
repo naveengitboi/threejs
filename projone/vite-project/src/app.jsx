@@ -21,14 +21,17 @@ function App() {
 
 
     //ambient light
-    const ambientLight = new THREE.AmbientLight(0xffffff, 0.5)
+    const ambientLight = new THREE.AmbientLight(0xffffff)
     ambientLight.castShadow = true;
-    scene.add(ambientLight)
+    scene.add( ambientLight)
+  
     //spot light
-    const spotLight = new THREE.SpotLight(0xfffeee,1)
+    const spotLight = new THREE.SpotLight(0xfefefe,1,1,10)
     spotLight.castShadow = true;
-    spotLight.position.set(0,64,35)
+    spotLight.position.set(0,1,1)
     scene.add(spotLight);
+    const spotLightHelper = new THREE.SpotLightHelper( spotLight );
+    scene.add( spotLightHelper );
 
 
 
