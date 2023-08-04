@@ -4,7 +4,6 @@ import * as THREE from 'three'
 export function App() {
 
   useEffect(() => {
-    const scene = 
   }, [])
 
   return (
